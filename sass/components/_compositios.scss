@@ -1,0 +1,50 @@
+.composition {
+  position: relative;
+
+  &__photo {
+    animation: moveInRight 1s ease-out; // starts at left
+    width: 100%; // always use percentages on images if possible, so it will nicely scale with the viewport
+    box-shadow: $black-forty-percent;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2s;
+    outline-offset: 2rem; // space to the outline of image
+
+    // it started to get bad at 900px so we'll use that breakpoint to fix it
+    @include respond(tab-land) {
+      // float: left;
+      position: relative;
+      width: 90%;
+      box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
+    }
+    // it started to get bad at 900px so we'll use that breakpoint to fix it
+    @include respond(tab-port) {
+      // float: left;
+      position: relative;
+      width: 100%;
+      box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
+    }
+    &:hover {
+      outline: 1rem solid $color-primary;
+      transform: scale(1.05) translateY(-0.5rem);
+      -webkit-transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+      z-index: 20; // displayed on top
+    }
+  }
+
+  // when composition is hovered select the photo that is nested inside which is not hovered (like in line 28) and change scale to .95
+  // so it happens as soon as you enter any of these elements. So the other ones are not hovered and so they shrink
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.95);
+  }
+  // composition:hover composition__photo:not(:hover)
+}
+.changes {
+  padding-left: 0px;
+  @include respond(tab-land) {
+    // float: left;
+    padding-left: 4rem;
+  }
+}

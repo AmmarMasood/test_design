@@ -1,0 +1,46 @@
+.section-about {
+  background-color: $color-grey-light-1;
+  padding: 10rem 0;
+  // margin-top: -20vh; // 95vh - 75vh
+
+  // @include respond(tab-port) {
+  //   padding: 20rem 0;
+  //   margin-top: -15vh;
+  // }
+}
+#section-features {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-grey-light-1, 0.7),
+      rgba($color-grey-light-1, 0.7)
+    ),
+    url(./../img/undraw_abstract_x68e.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.section-features {
+  padding: 10rem;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-grey-light-1, 0.8),
+      rgba($color-grey-light-1, 0.8)
+    ),
+    url(../../img/services_undraw_detailed_information_3sp6.svg);
+  background-size: 100%;
+  background-position: center;
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
+
+  &--icon-box {
+    margin-top: 2rem;
+    // border: 2px solid black;
+  }
+  &--icons {
+    height: 4rem;
+  }
+}

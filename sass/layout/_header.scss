@@ -1,0 +1,93 @@
+#vantajs {
+  width: 100vw;
+  height: 100vh;
+
+  // position: relative;
+  // margin-bottom: 10px;
+}
+.header {
+  // background-attachment: fixed;
+  // background-size: cover;
+  // --------------------------------------------------------------------------------------------
+  // vh = relative length, that every point, the height of this element,
+  // should be 95% almost 100% of the viewport height, user's visible area of a web page
+  // give the element a little bit of breathing room, try resizing the browser
+  // the white bar/space is the remaining 5% of viewport height
+  // --------------------------------------------------------------------------------------------
+  height: 100vh;
+  // background-image: linear-gradient(
+  //     to right bottom,
+  //     rgba($color-primary-light, 0.8),
+  //     rgba($color-primary-dark, 0.8)
+  //   ),
+  //   url(../img/hero-small.jpg);
+  background-size: cover;
+  background-position: center; // top of image won't be cropped when resizing
+  position: relative; // origin
+
+  // ------------------------------------------------------------------------------------
+  // If browser support this property then apply this style else apply default style
+  // ------------------------------------------------------------------------------------
+  // @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+  //   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  //   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  //   height: 95vh; // 95% almost 100% of the viewport height
+  // }
+
+  // ------------------------------------------------------------------------------------------------
+  // When the resolution is higher than 192 dots per inch and larger than 600px(37.5em) or(,)
+  // if -webkit-min-device-pixel-ratio is 2.0 for Safari and larger than 600px(37.5rem) or(,)
+  // larger than 2000px(125em)
+  // ------------------------------------------------------------------------------------------------
+  // @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+  //   only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+  //   only screen and (min-width: 125em) {
+  //   // background-image: linear-gradient(
+  //   //     to right bottom,
+  //   //     rgba($color-primary-light, 0.8),
+  //   //     rgba($color-primary-dark, 0.8)
+  //   //   ),
+  //   //   url(../img/hero.jpg);
+  // }
+
+  &__logo-box {
+    position: absolute;
+    top: 3rem;
+    left: 4rem;
+    // border: 2px solid white;
+  }
+
+  &__logo {
+    height: 10.5rem;
+  }
+
+  &__text-box {
+    // border: 2px solid white;
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    transform: translate(-65%, -50%); // Offset X Y
+    // text-align: center; // Button Discover is treat as text 'cause of inline-block so use text-align: center
+    @include respond(big-desktop) {
+      top: 60%;
+      left: 25%;
+      transform: translate(-60%, -50%); // Offset X Y
+    }
+    @include respond(tab-land) {
+      top: 60%;
+      left: 38%;
+      transform: translate(-55%, -50%); // Offset X Y
+    }
+    @include respond(tab-port) {
+      top: 60%;
+      left: 40%;
+      transform: translate(-55%, -50%); // Offset X Y
+    }
+    @include respond(phone) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); // Offset X Y
+      text-align: center;
+    }
+  }
+}
