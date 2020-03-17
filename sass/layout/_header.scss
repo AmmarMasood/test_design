@@ -64,30 +64,30 @@
   &__text-box {
     // border: 2px solid white;
     position: absolute;
-    top: 60%;
-    left: 35%;
-    transform: translate(-65%, -50%); // Offset X Y
-    // text-align: center; // Button Discover is treat as text 'cause of inline-block so use text-align: center
-    @include respond(big-desktop) {
-      top: 60%;
-      left: 25%;
-      transform: translate(-60%, -50%); // Offset X Y
-    }
-    @include respond(tab-land) {
-      top: 60%;
-      left: 38%;
-      transform: translate(-55%, -50%); // Offset X Y
-    }
-    @include respond(tab-port) {
-      top: 60%;
-      left: 40%;
-      transform: translate(-55%, -50%); // Offset X Y
-    }
-    @include respond(phone) {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); // Offset X Y
-      text-align: center;
-    }
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); // Offset X Y
+    text-align: center; // Button Discover is treat as text 'cause of inline-block so use text-align: center
+    // @include respond(big-desktop) {
+    //   top: 60%;
+    //   left: 25%;
+    //   transform: translate(-60%, -50%); // Offset X Y
+    // }
+    // @include respond(tab-land) {
+    //   top: 60%;
+    //   left: 38%;
+    //   transform: translate(-55%, -50%); // Offset X Y
+    // }
+    // @include respond(tab-port) {
+    //   top: 60%;
+    //   left: 40%;
+    //   transform: translate(-55%, -50%); // Offset X Y
+    // }
+    // @include respond(phone) {
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%); // Offset X Y
+    //   text-align: center;
+    // }
   }
 }

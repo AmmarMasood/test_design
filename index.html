@@ -178,19 +178,22 @@
               Contact Us
             </h2>
           </div>
-          <form class="contact-form row-form">
+          <form  class="contact-form row-form" name="contact" method="POST" data-netlify="true">
              <div class="form-field col-form x-50">
-                <input id="name" class="input-text js-input" type="text" required>
+                <input id="name" class="input-text js-input" type="text" name="name" required >
                 <label class="label" for="name">Name</label>
              </div>
              <div class="form-field col-form x-50">
-                <input id="email" class="input-text js-input" type="email" required>
+                <input id="email" class="input-text js-input" name="email" type="email" required>
                 <label class="label" for="email">E-mail</label>
              </div>
              <div class="form-field col-form x-100">
-                <input id="message" class="input-text js-input" type="text" required>
+                <input id="message" class="input-text js-input" name="password" type="text" required>
                 <label class="label" for="message">Message</label>
              </div>
+             <div class="form-field col-form x-100">
+              <div data-netlify-recaptcha="true"></div>
+           </div>
              <div class="form-field col-form x-100 align-center">
                 <input class="submit-btn" type="submit" value="Submit">
              </div>
