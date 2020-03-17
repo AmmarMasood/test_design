@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./css/style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <title>Company Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Lusitana|Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Maxtec</title>
   </head>
   <body>
     <div class="navigation">
@@ -30,7 +32,7 @@
             <a href="#" class="navigation__link">Our Portfolio</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link">Our Services</a>
+            <a href="#services" class="navigation__link">Our Services</a>
           </li>
           <li class="navigation__item">
             <a href="#" class="navigation__link">Clients Feedback</a>
@@ -44,18 +46,18 @@
     <!-- navigation -->
     <header class="header">
       <div id="vantajs"></div>
-      <!-- <div class="header__logo-box">
+      <div class="header__logo-box">
         <img src="./img/Logo.PNG" alt="Logo" class="header__logo" />
-      </div> -->
+      </div>
 
       <div class="header__text-box">
         <h1 class="heading-primary">
-          <span class="heading-primary--main">MaxTech</span>
+          <span class="heading-primary--main">MaxTec</span>
           <span class="heading-primary--sub">Technology meets Skills</span>
         </h1>
 
-        <a href="#section-tours" class="btn btn--white btn--animated"
-          >Discover our Serices</a
+        <a href="#contact-us" class="btn btn--white btn--animated"
+          >Contact Us</a
         >
       </div>
     </header>
@@ -90,7 +92,7 @@
           </div>
         </div>
       </section> <!-- SECTION ABOUT-->
-      <section class="section-features" id="section-features">
+      <section class="section-features" id="services">
           <div class="u-center-text u-margin-bottom-big">
               <h2 class="heading-secondary">
                 Our Services
@@ -168,7 +170,76 @@
             </div>
           </div>
         </section> <!-- SECTION FEATURES -->
+
+        <!-- contact us form start -->
+        <section id="contact-us" class="get-in-touch">
+          <div class="u-center-text u-margin-bottom-big">
+            <h2 class="heading-secondary">
+              Contact Us
+            </h2>
+          </div>
+          <form class="contact-form row-form">
+             <div class="form-field col-form x-50">
+                <input id="name" class="input-text js-input" type="text" required>
+                <label class="label" for="name">Name</label>
+             </div>
+             <div class="form-field col-form x-50">
+                <input id="email" class="input-text js-input" type="email" required>
+                <label class="label" for="email">E-mail</label>
+             </div>
+             <div class="form-field col-form x-100">
+                <input id="message" class="input-text js-input" type="text" required>
+                <label class="label" for="message">Message</label>
+             </div>
+             <div class="form-field col-form x-100 align-center">
+                <input class="submit-btn" type="submit" value="Submit">
+             </div>
+            
+          </form>
+          <ul class="social-icons">
+            <li class="social-icons--icon"><i class="fa fa-facebook-square"></i></li>
+            <li class="social-icons--icon"><i class="fa fa-twitter-square"></i></li>
+            <li class="social-icons--icon"><i class="fa fa-instagram"></i></li>
+            <li class="social-icons--icon"><i class="fa fa-envelope-o"></i></li>
+            <li class="social-icons--icon"><i class="fa fa-linkedin-square"></i></li>
+          </ul>
+       </section> 
+          
+          
+        <!-- contact is form ends -->
 </main>  
+<footer class="footer">
+  <div class="footer__logo-box">
+    <!-- Density switching : <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" class="footer__logo"> -->
+    <!-- Art Direction using picture element -->
+    <picture class="footer__logo">
+        <img srcset="./img/Logo.PNG 1x, ./img/Logo.PNG 2x" alt="Full logo" class="footer__logo" src="./img/Logo.PNG">
+    </picture>
+  </div>
+  <div class="row">
+    <div class="col-1-of-2">
+      <div class="footer__navigation">
+        <ul class="footer__list">
+          <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+          <li class="footer__item"><a href="#contact-us" class="footer__link">Contact us</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Privacy</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-1-of-2">
+      <p class="footer__copyright">
+        <!-- Built by <a href="#" class="footer__link">Barry Blando</a>&nbsp;. Copyright &copy; 2018. -->
+        
+        <a href="https://dev.to/barryblando" class="footer__link footer__link--badge">
+          MaxTec Solutions
+        </a> &copy; 2020.
+      </p>
+    </div>
+  </div>
+</footer>
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();
